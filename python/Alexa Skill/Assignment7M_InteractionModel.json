@@ -1,0 +1,122 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "simple skill",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "RandomNumberIntent",
+                    "slots": [
+                        {
+                            "name": "low",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "high",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "for a random number",
+                        "a random number between {low} and {high}",
+                        "give me a random number between {low} and {high}",
+                        "i want a random number",
+                        "give a random number",
+                        "give me a random number"
+                    ]
+                },
+                {
+                    "name": "DoArithmeticIntent",
+                    "slots": [
+                        {
+                            "name": "operation",
+                            "type": "operation"
+                        },
+                        {
+                            "name": "first_num",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "second_num",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "{first_num} and {second_num}",
+                        "{second_num}",
+                        "{first_num}",
+                        "the second number is {second_num}",
+                        "the first number is {first_num}",
+                        "it is {second_num}",
+                        "it is {first_num}",
+                        "{operation} {first_num} by {second_num}",
+                        "to {operation} {first_num} and {second_num}",
+                        "to {operation} the number {first_num} by {second_num}",
+                        "to {operation} the number {first_num} and {second_num}",
+                        "to do calculation of {first_num} {operation} by {second_num}",
+                        "to do calculation of {first_num} {operation} {second_num}",
+                        "{operation} the number {first_num} by {second_num}",
+                        "{operation} {first_num} and {second_num}",
+                        "calculate {first_num} {operation} {second_num}",
+                        "do calculation of {first_num} {operation} {second_num}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "operation",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "divide",
+                                "synonyms": [
+                                    "divided"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "subtract",
+                                "synonyms": [
+                                    "minus"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "multiply",
+                                "synonyms": [
+                                    "times",
+                                    "time"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "add",
+                                "synonyms": [
+                                    "plus"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
